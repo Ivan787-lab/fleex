@@ -3,6 +3,8 @@
     padding: 0;
 }
 $br: 4px;
+$padding: 35px 0 45px 135px;
+
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf');
@@ -11,13 +13,16 @@ $br: 4px;
     font-family: 'Roboto-light';
     src: url('../fonts/Roboto-Light.ttf');
 }
+::selection {
+    background: #82a3df85;
+}
 body {
     display: flex;
     flex-direction: column;
     height: max-content;
     width: 100%;
 
-    main { 
+    main {
         font-family: 'Roboto';
         .title-block {
             font-family: 'Roboto-light';
@@ -36,6 +41,7 @@ body {
                 line-height: 37px;
                 letter-spacing: 0.42px;
                 margin: 25px 0;
+                width: 470px;
             }
             .title-block__action {
                 background: #DD9D4C;
@@ -89,6 +95,173 @@ body {
 
             .logotypes__brand {
                 margin: 0 35px;
+                user-select: none;
+            }
+        }
+        .main__block-about {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 709px;
+            height: max-content;
+            overflow: hidden;
+            box-sizing: border-box;
+            .title-block {
+                color: black;
+            }
+            & > img {
+                user-select: none;
+                width: 800px;
+                height: 500px;
+            }
+        }
+        .main__create-experience {
+            padding: $padding;
+            background: rgba(143, 76, 23, 0.08);
+
+            .create-experience__img {
+                width: 800px;
+                height: 500px;
+                border-radius: 8px;
+                position: relative;
+                left: 100px;
+            }
+        }
+        .main__choose-the-equipment {
+            .title-block {
+                margin-left: 50px;
+            }
+            .choose-the-equipment__img {
+                width: 776px;
+                height: 849px;
+            }
+        }
+        .main__manage-intarface {
+            padding: $padding;
+
+            .manage-interface__img {
+                position: relative;
+                left: 80px;
+            }
+        }
+        .main__sit-back {
+            padding: 0 45px 45px;
+            background: #F9F6F3;
+
+            .sit-back__img {
+                width: 600px;
+                height: 900px;
+                position: relative;
+                top: -310px;
+            }
+
+            .title-block {
+                margin-left: 250px;
+            }
+        }
+        .main__set-yourself {
+            display: flex;
+            flex-direction: column;
+            padding: 110px;
+
+            .set-yourself__title {
+                text-align: left;
+                width: 467px;
+                font-size: 50px;
+                line-height: 58px;
+                font-family: 'Roboto-Light';
+            }
+
+            .set-yourself__perks {
+                margin-top: 130px;
+                align-self: center;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                width: 1280px;
+                height: max-content;
+                font-family: 'Roboto-Light';
+
+
+                .set-yourself__perk {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .perk__img {
+                        user-select: none;
+                    }
+                    .perk__title {
+                        margin: 15px 0;
+                        font-size: 15px;
+                    }
+                    .perk__text {
+                        width: 326px;
+                    }
+                }
+            }
+        }
+        .main__fleex-is-working {
+            background: rgba(143, 76, 23, 0.2);
+            padding: 120px;
+            display: flex;
+            align-items: center;
+
+            .fleex-is-working__title {
+                font-size: 43px;
+                line-height: 56px;
+                color: #1A0800;
+                width: 308px;
+
+            }
+
+            .fleex-is-working__block {
+                width: 346px;
+                margin: 0 100px;
+
+                .block__title {
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    width: 120px;
+                    justify-content: space-between;
+                    margin: 8px 0;
+                    & > img {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+
+                .block__text {
+                    width: 346px;
+                    font-size: 16px;
+                    line-height: 27px;
+                    letter-spacing: 0.42px;
+                    color: rgba(26, 8, 0, 0.7);
+                }
+            }
+        }
+        footer {
+            background: url('../img/room.jpg') center no-repeat;
+            height: 518px;
+            background-size: cover;
+            padding: 120px;
+            .footer__logo {
+                margin: 50px 0;
+            }
+            .footer__text {
+                font-size: 16px;
+                line-height: 32px;
+                letter-spacing: 0.42px;
+                color: #FFFFFF;
+                width: 339px;
+                margin: 50px 0;
+            }
+            .footer__copyright {
+                font-size: 12px;
+                line-height: 22px;
+                letter-spacing: 0.25px;
+                color: rgba(255, 255, 255, 0.6);
             }
         }
     }
